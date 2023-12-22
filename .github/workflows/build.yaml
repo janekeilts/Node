@@ -1,0 +1,16 @@
+name: Dummy Workflow
+
+on: [push]
+
+jobs:
+  pretend_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Pretend to Do Something
+        run: echo "Pretending to do some task..."
+      - name: Sleep for a Bit
+        run: sleep 5
+      - name: Final Step
+        run: echo "Done pretending!"
